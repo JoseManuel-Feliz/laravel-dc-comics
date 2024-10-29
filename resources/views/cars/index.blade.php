@@ -13,7 +13,7 @@
         @forelse($cars as $car)
         <div class="col">
 
-            <a class="card" href="#">
+            <a class="card" href="{{route('car.show',$car->id)}}">
                 <div class="img-wrapper">
                     <img src="{{$car->image_url}}" alt="{{$car->name.' photo'}}">
                 </div>
