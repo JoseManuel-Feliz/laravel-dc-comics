@@ -19,7 +19,7 @@ return new class extends Migration
             $table->tinyInteger('top_speed')->unsigned(true)->nullable(true);
             $table->tinyInteger('power')->unsigned(true)->nullable(true);
             $table->string('country', 20)->nullable(false);
-            $table->text('image_url', 20)->nullable(true);
+            $table->text('image_url')->nullable(true);
             $table->float('weight', 5, 2)->nullable(true);
             $table->text('description', 20)->nullable(true);
             $table->timestamps();
