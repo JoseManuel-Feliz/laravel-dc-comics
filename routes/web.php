@@ -18,3 +18,4 @@ use App\Http\Controllers\CarController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/cars', [CarController::class, 'index'])->name('cars');
+Route::get('/cars/{id}', [CarController::class, 'show'])->name('car.show');
