@@ -58,7 +58,10 @@ class SuperAdminController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $formdata = $request->all();
+        $car = Car::findOrFail($id);
+        $car->update($formdata);
+        return redirect()->route('superAdmin.show', $car->id);
     }
 
     /**
