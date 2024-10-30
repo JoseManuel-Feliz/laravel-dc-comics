@@ -18,9 +18,18 @@ use App\Http\Controllers\SuperAdminControllerController;
 |
 */
 
+/* HOMEPAGE RESOURCES */
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+/* CARS RESOURCES */
 Route::get('/cars', [CarController::class, 'index'])->name('cars');
-Route::get('/superadmin', [SuperAdminController::class, 'index'])->name('superAdmin.index');
-Route::get('/superadmin/create', [SuperAdminController::class, 'create'])->name('superAdmin.create');
 Route::get('/cars/{id}', [SuperAdminController::class, 'show'])->name('car.show');
+
+
+
+/* SUPER ADMIN RESOURCES */
+Route::get('/superadmin', [SuperAdminController::class, 'index'])->name('superAdmin.index');
+Route::post('/superadmin', [SuperAdminController::class, 'store'])->name('superAdmin.store');
+Route::get('/superadmin/create', [SuperAdminController::class, 'create'])->name('superAdmin.create');
 Route::get('/superadmin/{id}', [CarController::class, 'show'])->name('superAdmin.show');

@@ -23,11 +23,11 @@
     </div>
     <div>
         <label for="top-speed">top speed</label>
-        <input type="text" name="top_speed" id="top-speed">
+        <input type="number" name="top_speed" id="top-speed">
     </div>
     <div>
         <label for="power">power</label>
-        <input type="text" name="power" id="power">
+        <input type="number" name="power" id="power">
     </div>
     <div>
         <label for="country">country</label>
@@ -39,7 +39,7 @@
     </div>
     <div>
         <label for="weight">weight</label>
-        <input type="text" name="weight" id="weight">
+        <input type="number" name="weight" id="weight">
     </div>
     <div>
         <label for="description">description</label>
