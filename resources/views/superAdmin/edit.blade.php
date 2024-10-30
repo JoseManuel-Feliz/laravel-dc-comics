@@ -6,7 +6,7 @@
 
 
 
-<form action="{{route('superAdmin.store')}}" method="POST">
+<form action="{{route('superAdmin.update',$car->id)}}" method="POST">
     {{method_field('PUT')}}
 
     @csrf

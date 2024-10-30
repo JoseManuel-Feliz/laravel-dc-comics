@@ -33,3 +33,4 @@ Route::get('/superadmin/create', [SuperAdminController::class, 'create'])->name(
 Route::get('/superadmin/{id}', [SuperAdminController::class, 'show'])->name('superAdmin.show');
 Route::get('/superadmin/{id}/edit', [SuperAdminController::class, 'edit'])->name('superAdmin.edit');
 Route::post('/superadmin', [SuperAdminController::class, 'store'])->name('superAdmin.store');
+Route::put('/superadmin/{id}', [SuperAdminController::class, 'update'])->name('superAdmin.update');
