@@ -29,23 +29,10 @@ class SuperAdminController extends Controller
      */
     public function store(Request $request)
     {
-
         $formdata = $request->all();
 
-        $car = new Car();
-        $car->name = $formdata['name'];
-        $car->brand = $formdata['brand'];
-        $car->engine = $formdata['engine'];
-        $car->top_speed = $formdata['top_speed'];
-        $car->power = $formdata['power'];
-        $car->country = $formdata['country'];
-        $car->image_url = $formdata['image_url'];
-        $car->weight = $formdata['weight'];
-        $car->description = $formdata['description'];
-
-        $car->save();
-
-        return redirect()->route('superAdmin.show', ['id' => $car->id]);
+        $car = Car::create($formdata);
+        return redirect()->route('superAdmin.show', $car->id);
     }
 
     /**
