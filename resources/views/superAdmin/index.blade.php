@@ -41,7 +41,13 @@
                 <td>{{Str::words($car->description,4,' ...')}}</td>
                 <td> <a class="btn btn-primary" href="{{route('superAdmin.show',$car->id)}}">Show</a> </td>
                 <td> <a class="btn btn-warning" href="{{route('superAdmin.edit',$car->id)}}">Edit</a> </td>
-                <td> <a class="btn btn-danger" href="#">Delete</a> </td>
+                <td>
+                    <form action="{{route('superAdmin.delete', $car->id)}}" method="POST">
+                        @csrf
+                        {{method_field('DELETE')}}
+                        <div><button type="submit">delete</button></div>
+                    </form>
+                </td>
             </tr>
 
             @empty
