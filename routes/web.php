@@ -34,3 +34,4 @@ Route::get('/superadmin/{id}', [SuperAdminController::class, 'show'])->name('sup
 Route::get('/superadmin/{id}/edit', [SuperAdminController::class, 'edit'])->name('superAdmin.edit');
 Route::post('/superadmin', [SuperAdminController::class, 'store'])->name('superAdmin.store');
 Route::put('/superadmin/{id}', [SuperAdminController::class, 'update'])->name('superAdmin.update');
+Route::delete('/superadmin/{id}', [SuperAdminController::class, 'destroy'])->name('superAdmin.delete');

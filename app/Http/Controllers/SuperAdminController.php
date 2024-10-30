@@ -69,6 +69,8 @@ class SuperAdminController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $car = Car::findOrFail($id);
+        $car->delete();
+        return redirect()->route('superAdmin.index');
     }
 }
