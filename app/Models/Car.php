@@ -10,14 +10,23 @@ class Car extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'brand',
-        'engine',
-        'top_speed',
-        'power',
-        'country',
-        'image_url',
-        'weight',
-        'description'
+        'make',
+        'model',
+        'year',
+        'engine_fuel_type',
+        'engine_hp',
+        'engine_cylinders',
+        'transmission_type',
+        'driven_wheels',
+        'number_of_doors',
+        'market_category',
+        'vehicle_size',
+        'vehicle_style',
+        'highway_mpg',
+        'city_mpg',
+        'popularity',
+        'msrp',
+        'description',
+        'image_url'
     ];
 }
