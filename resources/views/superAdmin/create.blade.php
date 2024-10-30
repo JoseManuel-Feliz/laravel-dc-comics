@@ -5,8 +5,7 @@
 @section('main-content')
 
 
-<form action="post">
-
+<form action="{{route('superAdmin.store')}}" method="post">
     @csrf
 
     <div>
