@@ -21,7 +21,7 @@ class SuperAdminController extends Controller
      */
     public function create()
     {
-        //
+        return view('superAdmin.create');
     }
 
     /**

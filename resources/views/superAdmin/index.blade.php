@@ -8,6 +8,9 @@
 
 
 <div class="container">
+
+    <td> <a class="btn btn-primary" href="{{route('superAdmin.create')}}">Create</a> </td>
+
     <table>
         <thead>
             <tr>
