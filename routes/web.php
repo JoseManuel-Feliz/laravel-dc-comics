@@ -24,12 +24,15 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 /* CARS RESOURCES */
 Route::get('/cars', [CarController::class, 'index'])->name('cars');
+Route::get('/car/create', [CarController::class, 'create'])->name('car.create');
 Route::get('/cars/{id}', [CarController::class, 'show'])->name('car.show');
+Route::post('/car', [CarController::class, 'store'])->name('car.store');
 
 
 
 /* SUPER ADMIN RESOURCES */
-Route::get('/superadmin', [SuperAdminController::class, 'index'])->name('superAdmin.index');
+/* Route::get('/superadmin', [SuperAdminController::class, 'index'])->name('superAdmin.index');
 Route::get('/superadmin/create', [SuperAdminController::class, 'create'])->name('superAdmin.create');
 Route::get('/superadmin/{id}', [SuperAdminController::class, 'show'])->name('superAdmin.show');
 Route::post('/superadmin', [SuperAdminController::class, 'store'])->name('superAdmin.store');
+ */
