@@ -21,5 +21,6 @@ use App\Http\Controllers\SuperAdminControllerController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/cars', [CarController::class, 'index'])->name('cars');
 Route::get('/superadmin', [SuperAdminController::class, 'index'])->name('superAdmin.index');
+Route::get('/superadmin/create', [SuperAdminController::class, 'create'])->name('superAdmin.create');
 Route::get('/cars/{id}', [SuperAdminController::class, 'show'])->name('car.show');
 Route::get('/superadmin/{id}', [CarController::class, 'show'])->name('superAdmin.show');
