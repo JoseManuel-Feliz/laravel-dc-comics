@@ -40,7 +40,7 @@
                 <td>{{$car->weight.' kg'}}</td>
                 <td>{{Str::words($car->description,4,' ...')}}</td>
                 <td> <a class="btn btn-primary" href="{{route('superAdmin.show',$car->id)}}">Show</a> </td>
-                <td> <a class="btn btn-warning" href="#">Edit</a> </td>
+                <td> <a class="btn btn-warning" href="{{route('superAdmin.edit',$car->id)}}">Edit</a> </td>
                 <td> <a class="btn btn-danger" href="#">Delete</a> </td>
             </tr>
 

@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\SuperAdminController;
-use App\Http\Controllers\SuperAdminControllerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +31,5 @@ Route::get('/cars/{id}', [CarController::class, 'show'])->name('car.show');
 Route::get('/superadmin', [SuperAdminController::class, 'index'])->name('superAdmin.index');
 Route::get('/superadmin/create', [SuperAdminController::class, 'create'])->name('superAdmin.create');
 Route::get('/superadmin/{id}', [SuperAdminController::class, 'show'])->name('superAdmin.show');
+Route::get('/superadmin/{id}/edit', [SuperAdminController::class, 'edit'])->name('superAdmin.edit');
 Route::post('/superadmin', [SuperAdminController::class, 'store'])->name('superAdmin.store');
