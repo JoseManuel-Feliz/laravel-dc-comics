@@ -29,7 +29,7 @@ class SuperAdminController extends Controller
      */
     public function store(Request $request)
     {
-        $formdata = $request->all();
+        $formdata = $request->except('_token');
 
         $car = Car::create($formdata);
         return redirect()->route('superAdmin.show', $car->id);

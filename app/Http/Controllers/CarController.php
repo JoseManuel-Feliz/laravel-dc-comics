@@ -21,7 +21,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        //
+        return view('car.create');
     }
 
     /**
@@ -29,9 +29,11 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $formdata = $request->except('_token');
 
+        $car = Car::create($formdata);
+        return redirect()->route('car.show', $car->id);
+    }
     /**
      * Display the specified resource.
      */
