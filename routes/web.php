@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\SuperAdminController;
+use App\Http\Controllers\SuperAdminControllerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +20,6 @@ use App\Http\Controllers\CarController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/cars', [CarController::class, 'index'])->name('cars');
-Route::get('/cars/{id}', [CarController::class, 'show'])->name('car.show');
+Route::get('/superadmin', [SuperAdminController::class, 'index'])->name('superAdmin.index');
+Route::get('/cars/{id}', [SuperAdminController::class, 'show'])->name('car.show');
+Route::get('/superadmin/{id}', [CarController::class, 'show'])->name('superAdmin.show');

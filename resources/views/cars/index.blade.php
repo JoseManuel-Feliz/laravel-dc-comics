@@ -24,7 +24,7 @@
                 <p>{{$car->power.' HP'}}</p>
                 <p>{{$car->country}}</p>
                 <p>{{$car->weight.' kg'}}</p>
-                <p>{{Str::words($car->description,5,' ...')}}</p>
+                <p>{{Str::words($car->description,4,' ...')}}</p>
             </a>
 
         </div>
