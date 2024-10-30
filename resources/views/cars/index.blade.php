@@ -6,8 +6,7 @@
 
 <div>here goes the main content</div>
 
-<!-- <td> <a class="btn btn-primary" href="{{route('car.create')}}">Create</a> </td>
- -->
+
 <div class="container">
     <div class="row">
 
