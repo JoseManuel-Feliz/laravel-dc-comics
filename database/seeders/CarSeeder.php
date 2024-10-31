@@ -39,20 +39,20 @@ class CarSeeder extends Seeder
                 /* | */
                 'transmission_type' => $row[array_search('Transmission Type', $tableColumns)],
                 'driven_wheels' => $row[array_search('Driven_Wheels', $tableColumns)],
-                'number_of_doors' => $row[array_search('Number of Doors', $tableColumns)],
+              /*   'number_of_doors' => $row[array_search('Number of Doors', $tableColumns)], */
 
                 /* | */
-                'market_category' => $row[array_search('Market Category', $tableColumns)],
+                /* 'market_category' => $row[array_search('Market Category', $tableColumns)],
                 'vehicle_size' => $row[array_search('Vehicle Size', $tableColumns)],
-                'vehicle_style' => $row[array_search('Vehicle Style', $tableColumns)],
+                'vehicle_style' => $row[array_search('Vehicle Style', $tableColumns)], */
 
                 /* | */
-                'highway_mpg' => $row[array_search('highway MPG', $tableColumns)],
+                /* 'highway_mpg' => $row[array_search('highway MPG', $tableColumns)],
                 'city_mpg' => $row[array_search('city mpg', $tableColumns)],
-                'popularity' => $row[array_search('Popularity', $tableColumns)],
+                'popularity' => $row[array_search('Popularity', $tableColumns)], */
 
                 /* | */
-                'msrp' => $row[array_search('MSRP', $tableColumns)],
+               /*  'msrp' => $row[array_search('MSRP', $tableColumns)], */
                 'description' => $row[array_search('description', $tableColumns)],
                 'image_url' => $row[array_search('image_url', $tableColumns)],
 
