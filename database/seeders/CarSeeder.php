@@ -14,15 +14,28 @@ class CarSeeder extends Seeder
     public function run(): void
     {
 
+        $filePath = resource_path('csv-files/car_data.csv');
+
+        $file = fopen($filePath, 'r');
+
+        $tableColumns = fgetcsv($file);
+        /* dd($tableColumns); */
+        while (($row = fgetcsv($file)) !== false) {
+
+            $carData = [
+                'make' => $row[array_search('Make', $tableColumns)],
+                'model' => $row[array_search('Model', $tableColumns)],
+                'year' => $row[array_search('Year', $tableColumns)],
+
+            ];
+
+            $carData = Car::create($carData);
+
+            var_dump($carData);
+        }
 
 
 
-
-
-
-
-       /*  foreach ($cars as $car) {
-            $newCar = Car::create($car);
-        } */
+        fclose($file);
     }
 }
