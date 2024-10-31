@@ -15,10 +15,10 @@ return new class extends Migration
             $table->string('engine_fuel_type', 50)->nullable(true)->change();
             $table->float('engine_hp')->nullable(true)->default(0)->change();
             $table->float('engine_cylinders')->nullable(true)->default(0)->change();
-            $table->tinyInteger('highway_mpg')->unsigned()->nullable(true)->default(0)->change();
+          /*   $table->tinyInteger('highway_mpg')->unsigned()->nullable(true)->default(0)->change();
             $table->tinyInteger('city_mpg')->unsigned()->nullable(true)->default(0)->change();
             $table->integer('popularity')->unsigned()->nullable(true)->default(0)->change();
-            $table->integer('msrp')->unsigned()->nullable(true)->default(0)->change();
+            $table->integer('msrp')->unsigned()->nullable(true)->default(0)->change(); */
         });
     }
 
