@@ -21,7 +21,8 @@ class SuperAdminController extends Controller
      */
     public function create()
     {
-        return view('superAdmin.create');
+        $car = new Car();
+        return view('superAdmin.create', compact('car'));
     }
 
     /**
@@ -29,8 +30,20 @@ class SuperAdminController extends Controller
      */
     public function store(Request $request)
     {
-        $formdata = $request->all();
+        $formdata = $request->validate([
+            'make' => ['required', 'string', 'min:3', 'max:50'],
+            'model' => ['required', 'string', 'min:3', 'max:50'],
+            /* todo to change in date */
+            'year' => ['required', 'numeric', 'integer', 'min:0'],
+            'engine_fuel_type' => ['required', 'string', 'min:3', 'max:30'],
+            'engine_hp' => ['required', 'numeric', 'integer', 'min:0'],
+            'engine_cylinders' => ['required', 'numeric', 'integer', 'min:0', 'max:16'],
+            'transmission_type' => ['required', 'string', 'min:4', 'max:20'],
+            'driven_wheels' => ['required', 'string', 'min:4', 'max:20'],
+            'description' => ['required', 'string', 'min:10'],
+            'image_url' => ['required', 'url',],
 
+        ]);
         $car = Car::create($formdata);
         return redirect()->route('superAdmin.show', $car->id);
     }
@@ -58,7 +71,20 @@ class SuperAdminController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $formdata = $request->all();
+        $formdata = $request->validate([
+            'make' => ['required', 'string', 'min:3', 'max:50'],
+            'model' => ['required', 'string', 'min:3', 'max:50'],
+            /* todo to change in date */
+            'year' => ['required', 'numeric', 'integer', 'min:0'],
+            'engine_fuel_type' => ['required', 'string', 'min:3', 'max:30'],
+            'engine_hp' => ['required', 'numeric', 'integer', 'min:0'],
+            'engine_cylinders' => ['required', 'numeric', 'integer', 'min:0', 'max:16'],
+            'transmission_type' => ['required', 'string', 'min:4', 'max:20'],
+            'driven_wheels' => ['required', 'string', 'min:4', 'max:20'],
+            'description' => ['required', 'string', 'min:10'],
+            'image_url' => ['required', 'url',],
+
+        ]);
         $car = Car::findOrFail($id);
         $car->update($formdata);
         return redirect()->route('superAdmin.show', $car->id);
