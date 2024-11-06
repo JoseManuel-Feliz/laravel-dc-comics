@@ -6,7 +6,7 @@
 
 <div>here goes the main content</div>
 
-
+{{ url()->full()}}
 <div class="container">
 
     <td> <a class="btn btn-primary" href="{{route('superAdmin.create')}}">Create</a> </td>
@@ -15,30 +15,33 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Model</th>
                 <th>Brand</th>
-                <th>Engine</th>
-                <th>Top speed</th>
-                <th>Power</th>
-                <th>Country</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Fuel Type</th>
+                <th>Engine power</th>
+                <th>Engine Cylinders</th>
+                <th>Transmition type</th>
+                <th>Driven wheels</th>
                 <th>Image Url</th>
-                <th>Weight</th>
                 <th>Description</th>
+                <th colspan="3">Btn's</th>
             </tr>
         </thead>
         <tbody>
             @forelse($cars as $car)
             <tr>
                 <td>{{$car->id}}</td>
-                <td class="brand-model">{{$car->name}}</td>
-                <td>{{$car->brand}}</td>
-                <td>{{$car->engine}}</td>
-                <td>{{$car->top_speed.' km/h'}}</td>
-                <td>{{$car->power.' HP'}}</td>
-                <td>{{$car->country}}</td>
-                <td> {{Str::words($car->image_url,3,' ...')}} </td>
-                <td>{{$car->weight.' kg'}}</td>
-                <td>{{Str::words($car->description,4,' ...')}}</td>
+                <td>{{$car->make}}</td>
+                <td>{{$car->model}}</td>
+                <td>{{$car->year}}</td>
+                <td>{{$car->engine_fuel_type}}</td>
+                <td>{{$car->engine_hp.' HP'}}</td>
+                <td>{{$car->engine_cylinders}}</td>
+                <td>{{$car->transmission_type}}</td>
+                <td>{{Str::words($car->driven_wheels,2,' ...')}}</td>
+                <td> {{$car->image_url}} </td>
+                <td>{{Str::words($car->description,3,' ...')}}</td>
                 <td> <a class="btn btn-primary" href="{{route('superAdmin.show',$car->id)}}">Show</a> </td>
                 <td> <a class="btn btn-warning" href="{{route('superAdmin.edit',$car->id)}}">Edit</a> </td>
                 <td>

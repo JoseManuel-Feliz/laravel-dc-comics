@@ -14,16 +14,18 @@
 
 
             <div class="img-wrapper">
-                <img src="{{$car->image_url}}" alt="{{$car->name.' photo'}}">
+                <img src="{{$car->image_url}}" alt="{{$car->model.' photo'}}">
             </div>
-            <h5 class="brand-model">{{$car->name}}</h5>
-            <p>{{$car->brand}}</p>
-            <p>{{$car->engine}}</p>
-            <p>{{$car->top_speed.' km/h'}}</p>
-            <p>{{$car->power.' HP'}}</p>
-            <p>{{$car->country}}</p>
-            <p>{{$car->weight.' kg'}}</p>
+            <p>{{$car->make}}</p>
+            <p>{{$car->model}}</p>
+            <p>{{$car->year}}</p>
+            <p>{{$car->engine_fuel_type}}</p>
+            <p>{{$car->engine_hp.' HP'}}</p>
+            <p>{{$car->engine_cylinders}}</p>
+            <p>{{$car->transmission_type}}</p>
+            <p>{{$car->driven_wheels}}</p>
             <p>{{$car->description}}</p>
+            <p>{{$car->image_url}}</p>
 
         </div>
 
