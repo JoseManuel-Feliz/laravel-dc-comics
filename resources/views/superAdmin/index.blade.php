@@ -21,7 +21,7 @@
                 <th>Fuel Type</th>
                 <th>Engine power</th>
                 <th>Engine Cylinders</th>
-                <th>Transmition type</th>
+                <th>Transmission type</th>
                 <th>Driven wheels</th>
                 <th>Image Url</th>
                 <th>Description</th>
